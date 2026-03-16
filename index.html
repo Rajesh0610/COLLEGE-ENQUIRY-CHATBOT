@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VSB Engineering College - Chatbox for College Enquiries">
+    <title>VSB Engineering College | College Enquiry Chatbox</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Main Content Background -->
+    <div class="background-wrapper">
+        <div class="glass-container">
+            <h1>Welcome to <span>VSB Engineering College</span></h1>
+            <p>Your journey to excellence begins here. Have questions about admissions, courses, or departments? Ask our
+                virtual assistant!</p>
+        </div>
+    </div>
+
+    <!-- Chatbox UI -->
+    <div class="chatbox-container" id="chatboxContainer">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="header-info">
+                <div class="avatar">
+                    <img src="https://ui-avatars.com/api/?name=VSB+Bot&background=FF6600&color=fff&rounded=true"
+                        alt="Bot Avatar">
+                    <span class="status-dot"></span>
+                </div>
+                <div class="header-text">
+                    <h2>VSB Bot</h2>
+                    <p>Admissions Assistant</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="sync-btn" id="syncBtn" title="Sync Knowledge with Website">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+                <button class="close-btn" id="closeChatBtn" aria-label="Close Chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Body -->
+        <div class="chat-body" id="chatBody">
+            <div class="message incoming">
+                <div class="avatar">
+                    <img src="https://ui-avatars.com/api/?name=VSB+Bot&background=FF6600&color=fff&rounded=true"
+                        alt="Bot Avatar">
+                </div>
+                <div class="message-content">
+                    <p>Hello! 👋 Welcome to VSB Engineering College. How can I assist you with your college enquiry today?</p>
+                </div>
+            </div>
+
+            <div class="suggestions" id="suggestions">
+                <button type="button" class="suggestion-btn" data-suggestion="College Location">Campus Location</button>
+                <button type="button" class="suggestion-btn" data-suggestion="Why join VSB?">Should I join VSB?</button>
+                <button type="button" class="suggestion-btn" data-suggestion="Placement Stats 2025">Placement Stats</button>
+                <button type="button" class="suggestion-btn" data-suggestion="Admission Process">Admissions</button>
+                <button type="button" class="suggestion-btn" data-suggestion="B.Tech Courses">Courses</button>
+            </div>
+        </div>
+
+        <!-- Chat Input Form -->
+        <form class="chat-input" id="chatForm">
+            <input type="text" id="userInput" placeholder="Type your message here..." autocomplete="off" required>
+            <button type="submit" class="send-btn" id="sendBtn" aria-label="Send Message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggleBtn" aria-label="Open Chat">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <script src="script.js?v=4.0"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official VSB Engineering College - Simulation</title>
+    <style>
+        :root {
+            --vsb-blue: #003366;
+            --vsb-orange: #FF6600;
+            --vsb-white: #FFFFFF;
+            --vsb-gray: #f4f4f4;
+        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--vsb-gray); }
+        header { 
+            background-color: var(--vsb-blue); 
+            color: white; 
+            padding: 1.5rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            border-bottom: 4px solid var(--vsb-orange);
+        }
+        .logo-area { display: flex; align-items: center; gap: 15px; }
+        .hero { 
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .container { max-width: 1000px; margin: -3rem auto 2rem; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h2 { color: var(--vsb-blue); border-left: 5px solid var(--vsb-orange); padding-left: 15px; }
+        .stats { display: flex; justify-content: space-around; margin: 2rem 0; text-align: center; }
+        .stat-item h3 { color: var(--vsb-orange); font-size: 2rem; margin: 0; }
+        
+        /* The Chatbot Widget Positioning */
+        #vsb-chatbot-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 420px;
+            height: 650px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+            z-index: 999999;
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <div style="background: white; padding: 5px; border-radius: 5px;">
+                <img src="https://vsbec.edu.in/wp-content/uploads/2023/04/vsb-logo.png" alt="VSB Logo" height="50" onerror="this.src='https://ui-avatars.com/api/?name=VSB&background=FF6600&color=fff'">
+            </div>
+            <h1>V.S.B. Engineering College</h1>
+        </div>
+        <nav style="display: flex; gap: 20px;">
+            <span>Home</span>
+            <span>Academics</span>
+            <span>Placements</span>
+            <span>Contact</span>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Empowering Engineers of Tomorrow</h1>
+        <p>A Top Tier Academic Institution with Record-Breaking Placements.</p>
+    </div>
+
+    <div class="container">
+        <h2>About VSBEC</h2>
+        <p>V.S.B. Engineering College (VSBEC) is a premier institution located in Karur, Tamil Nadu. We offer a wide range of undergraduate (B.E/B.Tech) and postgraduate programs designed to meet global industry standards.</p>
+        
+        <div class="stats">
+            <div class="stat-item"><h3>98%</h3><p>Placement Record</p></div>
+            <div class="stat-item"><h3>100+</h3><p>Top Recruiters</p></div>
+            <div class="stat-item"><h3>Rank 1</h3><p>In Region</p></div>
+        </div>
+
+        <h2>Why Choose Us?</h2>
+        <p>With state-of-the-art laboratory facilities, experienced faculty, and a dedicated training and placement cell, we ensure every student is industry-ready from day one.</p>
+        
+        <p style="background: var(--vsb-gray); padding: 1rem; border-radius: 8px; border-top: 2px solid var(--vsb-blue);">
+            <strong>Notice:</strong> Need help with admissions? Click the <strong>Chatbot</strong> on the bottom right!
+        </p>
+    </div>
+
+    <!-- 
+        THIS IS IT! This iframe pulls your local chatbot projects 
+        straight into this "Official Simulation" page.
+    -->
+    <iframe id="vsb-chatbot-widget" src="http://localhost:3000/index.html"></iframe>
+
+</body>
+</html>
